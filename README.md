@@ -6,7 +6,7 @@ TODO APP
 ### Requisitos
 
 * Docker instalado
-* Docker-compose instalado
+* Docker compose instalado
 * Nodejs
 * NPM
 
@@ -17,13 +17,13 @@ TODO APP
   Na pasta api  do projeto digite o comando:
 
   ```sh
-  docker-compose up -d --build
+  docker compose up -d --build
   ```
 
   Depois rode o comando abaixo para criar as tabelas no banco de dados:
 
   ```sh
-  docker-compose run --rm app npm run migration:run
+  docker compose run --rm app npm run migration:run
 
   ```
 
@@ -32,7 +32,7 @@ TODO APP
   Na pasta frontend do projeto digite o comando baixo para instalar as dependencias:
 
   ```sh
- npm install
+ npm install --legacy-peer-deps
   ```
 
   Depois rode esse comando para inicar a aplicação
