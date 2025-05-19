@@ -23,7 +23,7 @@ TODO APP
   Depois rode o comando abaixo para criar as tabelas no banco de dados:
 
   ```sh
-  docker-compose run --rm app npm run typeorm migration:run
+  docker-compose run --rm app npm run migration:run
 
   ```
 
@@ -46,7 +46,7 @@ TODO APP
 * api: **3001**
 * frontend: **3000**
 
-## Para acessar a documentação
+## Para acessar a documentação da api
 
 ```sh
  http://localhost:3001/api

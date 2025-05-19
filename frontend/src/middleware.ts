@@ -11,18 +11,21 @@ export function middleware(request: NextRequest) {
 
   const isPublicPage = isLoginPage || isRegisterPage || isRegisterAdminPage;
 
+  if (pathname === '/' && !authToken) {
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
+
   if (authToken && isPublicPage) {
     return NextResponse.redirect(new URL('/tasks', request.url));
   }
 
-  if (!authToken && !isPublicPage) {
+  if (!authToken && !isPublicPage && pathname !== '/') {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
-  // ✅ Permitir acesso normalmente
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/((?!_next|favicon.ico).*)'],
+  matcher: ['/', '/((?!_next|favicon.ico).*)'],
 };
