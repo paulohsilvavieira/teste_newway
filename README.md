@@ -8,7 +8,7 @@ TODO APP
 * Docker instalado
 * Docker-compose instalado
 * Nodejs
-* NPM Instalado
+* NPM
 
 # Rodando aplicação completa
 
